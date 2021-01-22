@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import "header";
+@import "toolbar";
+@import "formula";
+@import "table";
+@import "dashboard";
+
+* {
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+}
+
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  /*  font-size: calc( (100vw - 320px)/(1280 - 320) * (24 - 16) + 16px);    */
+}
+
+html, body {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  height: 100%;
+  max-height: 100%;
+  min-width: 300px;
+}
+
+body, table {
+  background-color: #fff;
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.88rem;
+}
+
+input, textarea, select, button {
+  cursor: pointer;
+}
+
+ol, ul {
+  list-style-type: none;
+}
+
+a, img, button {
+  border: none;
+  outline: none;
+}
+
+img {
+  display: block;
+  /*height: 100%;*/
+  max-height: 100%;
+  max-width: 100%;
+  width: 100%;
+}
+
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus,
+input[type="image"]:focus {
+  outline: none;
+  outline-width: 0;
+  outline-color: transparent;
+}
+
+input::-moz-focus-inner {
+  border: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+mark {
+  background: none;
+}
+
+textarea {
+  outline: none;
+  resize: none;
+}
+
+input[type="text"], input[type="password"] {
+  background-color: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  vertical-align: middle;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
+  border-color: inherit;
+}
+
+input[type="checkbox"] {
+  opacity: 0;
+  vertical-align: middle;
+}
+
+input::-ms-clear, input::-ms-reveal {
+  display: none;
+}
+
+::-webkit-input-placeholder {
+  color: #646464;
+}
+
+::-moz-placeholder {
+  color: #646464;
+}
+
+:-moz-placeholder {
+  color: #646464;
+}
+
+:-ms-input-placeholder {
+  color: #646464 !important;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+@media print {
+  .wrap {
+    border: 0
+  }
+}
+
+@-ms-viewport {
+  width: auto !important;
+}
+
+@-moz-document url-prefix() {
+  .navigation {
+    height: 100%;
+  }
+}
+
+.excel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0 auto;
+  width: 1100px;
+}
+
+.material-icons {
+  @include button(red);
+
+  &:hover {
+    @include button(rgba(0, 0, 0, 1));
+  }
+}
+
