@@ -1,0 +1,33 @@
+@import "variables";
+@import "mixins";
+
+.excel__toolbar {
+  background-color: #e0fae1;
+  border-bottom: 1px solid $border-color;
+  border-top: 1px solid $border-color;
+  padding: 4px 0;
+
+  ul {
+    display: flex;
+    justify-content: flex-start;
+
+    li {
+      padding: 0 16px;
+
+      .material-icons {
+        border-radius: 4px;
+        font-size: 1.2rem;
+        height: 32px;
+        line-height: 34px;
+        width: 32px;
+
+        &:hover,
+        &.current {
+          background-color: rgba(255, 255, 255, .2);
+          box-shadow: inset 2px 2px 1px rgba(154, 147, 140, 0.5), 1px 1px 1px rgba(255, 255, 255, 1);
+          border-color: green;
+        }
+      }
+    }
+  }
+}
